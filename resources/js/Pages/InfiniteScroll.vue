@@ -12,7 +12,7 @@
                     class="py-2 w-full px-2 grid grid-cols-2 gap-6 font-extrabold bg-slate-400"
                 >
                     <div
-                        class="border border-gray-300 rounded-md py-1.5 relative bg-white text-slate-800"
+                        class="border border-gray-300 rounded-md py-1.5 relative bg-white text-slate-800 col-span-2 md:col-span-1"
                     >
                         <input
                             id="search"
@@ -94,7 +94,7 @@ export default {
             this.offset = 0;
             this.exampleData = [];
             this.searchError = null;
-            this.loadMoreExampleData();
+            this.exampleData = this.loadMoreExampleData();
         }, 100),
     },
     mounted() {
@@ -103,16 +103,17 @@ export default {
             threshold: 0,
         });
         this.observer.observe(target);
-        this.loadMoreExampleData();
+        this.exampleData = this.loadMoreExampleData();
     },
     unmounted() {
         this.observer.disconnect();
     },
     methods: {
         handleScroll() {
-            this.loadMoreExampleData();
+            this.exampleData = this.loadMoreExampleData();
         },
         loadMoreExampleData() {
+            let exampleData = this.exampleData;
             axios
                 .get("/api/example-data/query", {
                     headers: {
@@ -129,7 +130,7 @@ export default {
                         if (response.data.length < 20) {
                             this.loadMore = false;
                         }
-                        this.exampleData.push(...response.data);
+                        exampleData.push(...response.data);
                         this.searchError = null;
                     }
                 })
@@ -141,6 +142,8 @@ export default {
                               "Die Anfrage konnte nicht verarbeitet werden, bitte probieren Sie es später erneut.");
                 });
             this.offset += 20;
+
+            return exampleData;
         },
     },
 };
