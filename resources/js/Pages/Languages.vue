@@ -6,7 +6,7 @@
         </heading>
 
         <ul class="space-y-2 pl-1">
-            <li class="grid grid-cols-12 gap-2 items-center">
+            <li class="grid grid-cols-3 md:grid-cols-11 gap-2 items-center">
                 <span class="font-bold">Deutsch:</span>
                 <span
                     class="bg-green-600 py-1 px-2 rounded-md w-64 block h-8 shadow-md"
@@ -14,7 +14,7 @@
                     Muttersprache
                 </span>
             </li>
-            <li class="grid grid-cols-12 gap-2 items-center">
+            <li class="grid grid-cols-3 md:grid-cols-11 gap-2 items-center">
                 <span class="font-bold">Englisch:</span>
                 <span
                     class="relative w-64 py-1 block rounded-md bg-slate-800 h-8 shadow-md"
@@ -26,7 +26,7 @@
                     </span>
                 </span>
             </li>
-            <li class="grid grid-cols-12 gap-2 items-center">
+            <li class="grid grid-cols-3 md:grid-cols-11 gap-2 items-center">
                 <span class="font-bold">Japanisch:</span>
                 <span
                     class="relative w-64 py-1 block rounded-md bg-slate-800 h-8 shadow-md"
