@@ -30,23 +30,31 @@
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                TALL Stack (<span class="text-sky-300 font-bold"
-                    >Laravel, Livewire, Tailwind CSS, Alpine JS</span
-                >)
+                <div>
+                    TALL Stack (
+                    <span class="text-sky-300 font-bold">
+                        Laravel, Livewire, Tailwind CSS, Alpine JS
+                    </span>
+                    )
+                </div>
             </li>
             <li class="flex items-center gap-2">
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                Fullstack Entwicklung mit
-                <span class="text-sky-300 font-bold">PHP</span>
+                <div>
+                    Fullstack Entwicklung mit
+                    <span class="text-sky-300 font-bold">PHP</span>
+                </div>
             </li>
             <li class="flex items-center gap-2">
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                9 Jahre Erfahrung mit
-                <span class="text-sky-300 font-bold">Linux</span>
+                <div>
+                    9 Jahre Erfahrung mit
+                    <span class="text-sky-300 font-bold">Linux</span>
+                </div>
             </li>
             <li class="flex items-center gap-2">
                 <CheckmarkCircleIcon
@@ -58,24 +66,30 @@
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                Grundkenntnisse zu
-                <span class="text-sky-300 font-bold">Kubernetes</span>
+                <div>
+                    Grundkenntnisse zu
+                    <span class="text-sky-300 font-bold">Kubernetes</span>
+                </div>
             </li>
             <li class="flex items-center gap-2">
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                Erfahrung mit
-                <span class="text-sky-300 font-bold">RabbitMQ</span>
+                <div>
+                    Erfahrung mit
+                    <span class="text-sky-300 font-bold">RabbitMQ</span>
+                </div>
             </li>
             <li class="flex items-center gap-2">
                 <CheckmarkCircleIcon
                     class="fill-sky-300 h-5 w-5 flex items-center text-xl"
                 />
-                Kleine Einblicke in weitere Frameworks wie
-                <span class="text-sky-300 font-bold"
-                    >Vue.js, Node.js und Django</span
-                >
+                <div>
+                    Kleine Einblicke in weitere Frameworks wie
+                    <span class="text-sky-300 font-bold">
+                        Vue.js, Node.js und Django
+                    </span>
+                </div>
             </li>
         </ul>
 

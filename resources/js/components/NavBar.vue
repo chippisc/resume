@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="flex gap-6 w-full bg-blue-600 text-white justify-between font-bold"
+            class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full bg-blue-600 text-white justify-between font-bold"
         >
             <div class="flex gap-6">
                 <router-link
@@ -29,7 +29,7 @@
                     >Sprachen</router-link
                 >
             </div>
-            <div class="flex gap-6">
+            <div class="flex gap-6 md:justify-self-end">
                 <router-link
                     active-class="cursor-default underline"
                     class="p-3"
