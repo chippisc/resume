@@ -92,9 +92,13 @@ export default {
         search: debounce(function () {
             this.loadMore = true;
             this.offset = 0;
-            this.exampleData = [];
             this.searchError = null;
-            this.exampleData = this.loadMoreExampleData();
+            const newData = async () => { await this.loadMoreExampleData()
+                .then((newData) => {
+                    this.exampleData = newData;
+                });
+            }
+            newData();
         }, 100),
     },
     mounted() {
@@ -103,18 +107,19 @@ export default {
             threshold: 0,
         });
         this.observer.observe(target);
-        this.exampleData = this.loadMoreExampleData();
     },
     unmounted() {
         this.observer.disconnect();
     },
     methods: {
-        handleScroll() {
-            this.exampleData = this.loadMoreExampleData();
+        async handleScroll() {
+            const newData = await this.loadMoreExampleData()
+                .then((newData) => {
+                    this.exampleData.push(...newData);
+                });
         },
-        loadMoreExampleData() {
-            let exampleData = this.exampleData;
-            axios
+        async loadMoreExampleData() {
+            const newData = await axios
                 .get("/api/example-data/query", {
                     headers: {
                         accept: "application/json",
@@ -130,8 +135,9 @@ export default {
                         if (response.data.length < 20) {
                             this.loadMore = false;
                         }
-                        exampleData.push(...response.data);
                         this.searchError = null;
+                        
+                        return response.data;
                     }
                 })
                 .catch((error) => {
@@ -143,7 +149,7 @@ export default {
                 });
             this.offset += 20;
 
-            return exampleData;
+            return newData;
         },
     },
 };
