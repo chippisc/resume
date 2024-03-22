@@ -13,7 +13,7 @@
         <div class="flex space-x-1 items-center py-2">
             <p>
                 Das gesamte Projekt kann auf
-                <a href="#" class="text-sky-300 font-bold">git</a> eingesehen
+                <a href="https://github.com/chippisc/resume" class="text-sky-300 font-bold">git</a> eingesehen
                 werden
             </p>
         </div>
