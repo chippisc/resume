@@ -93,11 +93,11 @@ export default {
             this.loadMore = true;
             this.offset = 0;
             this.searchError = null;
-            const newData = async () => { await this.loadMoreExampleData()
-                .then((newData) => {
+            const newData = async () => {
+                await this.loadMoreExampleData().then((newData) => {
                     this.exampleData = newData;
                 });
-            }
+            };
             newData();
         }, 100),
     },
@@ -113,10 +113,9 @@ export default {
     },
     methods: {
         async handleScroll() {
-            const newData = await this.loadMoreExampleData()
-                .then((newData) => {
-                    this.exampleData.push(...newData);
-                });
+            await this.loadMoreExampleData().then((newData) => {
+                this.exampleData.push(...newData);
+            });
         },
         async loadMoreExampleData() {
             const newData = await axios
@@ -136,7 +135,7 @@ export default {
                             this.loadMore = false;
                         }
                         this.searchError = null;
-                        
+
                         return response.data;
                     }
                 })
