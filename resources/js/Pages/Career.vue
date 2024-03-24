@@ -50,7 +50,7 @@
                 </TimelineItem>
                 <TimelineItem>
                     <template #title>
-                        B.Sc. Informatik an der Dualen Hochschule
+                        B. Sc. Informatik an der Dualen Hochschule
                         Baden-Württemberg, Stuttgart
                     </template>
                     <template #time> September 2019 - September 2022 </template>

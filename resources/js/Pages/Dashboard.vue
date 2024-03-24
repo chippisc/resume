@@ -15,7 +15,7 @@
                 Das gesamte Projekt kann auf
                 <a
                     href="https://github.com/chippisc/resume"
-                    class="text-sky-300 font-bold"
+                    class="text-sky-300 underline"
                     >git</a
                 >
                 eingesehen werden

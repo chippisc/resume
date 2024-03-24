@@ -63,21 +63,7 @@
                         @click="showMenu = !showMenu"
                     >
                         <span class="sr-only">Open main menu</span>
-                        <svg
-                            class="w-5 h-5"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 17 14"
-                        >
-                            <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15"
-                            />
-                        </svg>
+                        <MenuIcon class="fill-white" h="30px" w="30px" />
                     </button>
                     <div v-if="showMenu" class="w-full">
                         <ul
@@ -130,10 +116,12 @@
 
 <script>
 import HomeIcon from "vue-ionicons/dist/ios-home.vue";
+import MenuIcon from "vue-ionicons/dist/ios-menu.vue";
 
 export default {
     components: {
         HomeIcon,
+        MenuIcon,
     },
     data() {
         return {
